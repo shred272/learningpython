@@ -1,18 +1,21 @@
+# these will be used as global variables throughout
 HaveMeat = False
 HaveMoney = False
 
 def outside():
-    print("""You are drunk from partying and standing outside in a sandy plaza on Tatooine.
-    Ahead of you, you see the notorious Mos Eisly Cantina bar where your favourite band plays.
-    On your right, there is a local kebab shop.\n""")
+    print("You are drunk from partying and you are standing outside in a sandy plaza on Tatooine.")
+    print("Ahead of you, you see the notorious Mos Eisly Cantina bar where your favourite band plays.")
+    print("On your right, there is a local kebab shop.\n")
 
     print("Where would you like to go?")
 
     choice = input("(bar/kebab)> ")
 
     if choice == "bar":
+        print("You head to the Mos Eisley Cantina.")
         cantina()
     elif choice == "kebab":
+        print("You head to the kebab shop.")
         kebab_shop()
     else:
         print("You can't make up your mind and drunkenly stumble around for a bit.\n")
@@ -29,8 +32,8 @@ def kebab_shop():
 
         if choice == "yes":
             HaveMeat = False
-            print("""Gromodo grunts and you know he wants to buy the meat.
-            You hand over the meat and he hands you a pouch of peggats much heavier than you expected.\n""")
+            print("Gromodo grunts and you know he wants to buy the meat.")
+            print("You hand over the meat and he hands you a pouch of peggats much heavier than you expected.\n")
             HaveMoney = True
         else:
             print("You let go a fart to conceal the meat smell and smile at Gromodo.\n")
@@ -43,23 +46,23 @@ def kebab_shop():
         if choice == "yes":
             HaveMoney = False
 
-            print("""You hand over your money and Gromodo gives you some kebab.
-            "THIS IS THE BEST KEBAB EVER!" You drunkenly exclaim as you finish your food.
-            You leave the shop.""")
+            print("You hand over your money and Gromodo gives you some kebab.")
+            print('"THIS IS THE BEST KEBAB EVER!" You drunkenly exclaim as you finish your food.')
+            print("You leave the shop.")
             outside()
         else:
-            print("""Gromodo yells at you to leave if you won't buy anything.
-            You leave the shop.""")
+            print("Gromodo yells at you to leave if you won't buy anything.")
+            print("You leave the shop.")
             outside() 
     else:
         print("You are too drunk and your head is spinning. You go back outside.")
         outside()
 
 def cantina():
-    print("""You enter the Mos Eisley Cantina and your favourite band is playing your favourite song!
-    What a coincidence!
-    You drunkenly dance for a bit and notice some swinging doors to the kitchen and at the other end of the room you see a door to going backstage.
-    Where do you decide to go?""")
+    print("You enter the Mos Eisley Cantina and your favourite band is playing your favourite song!")
+    print("What a coincidence!")
+    print("You drunkenly dance for a bit and notice some swinging doors to the kitchen and at the other end of the room you see a door to going backstage.")
+    print("Where do you decide to go?")
     choice = input("(outside/backstage/kitchen)> ")
 
     if choice == "outside":
@@ -84,9 +87,8 @@ def backstage():
         print("Do you bribe the bouncer with the large pouch of peggats?")
         choice = input("(yes/no)> ")
         if choice == "yes":
-            print("""You reach for the pouch of peggats and throw it to the bouncer. The bouncer looks at it in
-            disbelief and let's you pass.
-            CONGRATULATIONS! You got to meet your favourite band and have some drinks with them!""")
+            print("You reach for the pouch of peggats and throw it to the bouncer. The bouncer looks at it in disbelief and let's you pass.")
+            print("CONGRATULATIONS! You got to meet your favourite band and have some drinks with them!")
             exit(0)
         else:
             print("You leave the corridor and go back in the bar.")
